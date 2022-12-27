@@ -9,6 +9,8 @@ namespace EventBus.Base.Abstraction
 {
    public interface IEventBus
     {
+
+        //Publish
         void Publish(IntegrationEvent @event);
 
         void Subscribe<T, TH>() where T : IntegrationEvent where TH : IIntegrationEventHandler<T>;
